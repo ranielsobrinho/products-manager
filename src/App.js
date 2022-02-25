@@ -1,10 +1,21 @@
-import React from 'react';
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.css";
+import { Api } from "./services/Api";
+import Navbar from "./components/Navbar";
+import ProductsTable from "./components/ProductsTable";
 
 function App() {
+  useEffect(() => {
+    Api.get("/products")
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error) => console.error(error));
+  });
   return (
     <div>
-      <h1>Hello World</h1>
+      <Navbar />
+      <ProductsTable />
     </div>
   );
 }

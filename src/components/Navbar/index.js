@@ -1,5 +1,5 @@
 import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
-import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import React from "react";
 
 export default function Navbar() {
@@ -10,9 +10,12 @@ export default function Navbar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Product Manager
           </Typography>
-          <Button color="inherit">new product<AddCircleOutlineIcon /></Button>
+          <Button color="inherit">
+            new product
+            <AddCircleOutlineIcon />
+          </Button>
         </Toolbar>
       </AppBar>
     </Box>
-  )
+  );
 }
